@@ -809,6 +809,13 @@
     }
 }
 
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    if (self.didFailWithErrorHandler) {
+        self.didFailWithErrorHandler(webView, error);
+    }
+}
+
 #pragma mark - Progress Delegate -
 -(void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress
 {

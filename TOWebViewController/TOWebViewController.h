@@ -175,6 +175,8 @@
  */
 @property (nonatomic,copy)      BOOL (^shouldStartLoadRequestHandler)(NSURLRequest *request, UIWebViewNavigationType navigationType);
 
+@property (nonatomic,copy)      void (^didFailWithErrorHandler)(UIWebView *webView, NSError *error);
+
 /**
 An optional block that when set, will be triggered each time the web view has finished a load operation.
 */
